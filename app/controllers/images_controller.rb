@@ -79,7 +79,7 @@ class ImagesController < ApplicationController
     @count = @@count;
     @size = @@size;
     @image = @@images[@@count];
-    @image = Image.new(:url =>'https://pp.vk.me/c322219/v322219596/20a8/MX_0_lCKbvc.jpg')
+    #@image = Image.new(:url =>'https://pp.vk.me/c322219/v322219596/20a8/MX_0_lCKbvc.jpg')
   end
 
   def nextPicture
