@@ -1,6 +1,6 @@
 /**
  * Created by beta on 24.06.14.
-
+ */
 $(document).ready(function(){
     $(".prev").click(function(){
         $.ajax({
@@ -46,4 +46,3 @@ $(document).ready(function(){
         });
     })
 });
- */
