@@ -1,0 +1,39 @@
+
+require 'set'
+
+
+   def generate_points (t1,t2)
+    set_of_points = Set.new
+    min=-1;
+    max = 1;
+    (min..max).each do |i|
+          t1_1 = t1;
+          if t1 < 19
+            t1_1 = t1+i;
+            if t1_1<0
+              t1_1=17;
+            elsif t1_1 >17
+              t1_1=0
+            end
+          end
+          (min..max).each do |j|
+                t2_2=t2;
+                if t1 < 19
+                  t1_1 = t1+i;
+                  if t1_1<0
+                    t1_1=17;
+                  elsif t1_1 >17
+                    t1_1=0
+                  end
+                end
+                set_of_points.add([t1,t2]);
+                set_of_points.add([t2,t1]);
+          end
+    end
+    set_of_points
+    end
+   m = generate_points(1,2)
+    m.each  do |x|
+	puts x[0]
+	
+	end

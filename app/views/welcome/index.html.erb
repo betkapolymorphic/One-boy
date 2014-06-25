@@ -1,0 +1,43 @@
+
+<script>
+
+    function loadColor()
+    {
+
+        var color1 = document.getElementById('color1').color;
+        var h1 =color1.hsv[0]*60;
+        var s1 =color1.hsv[1]*100;
+        var v1=color1.hsv[2]*100;
+        var color2 = document.getElementById('color2').color;
+        var h2 =color2.hsv[0]*60;
+        var s2 =color2.hsv[1]*100;
+        var v2=color2.hsv[2]*100;
+        //runPHP("loadPictures.php","h1="+h1+"&s1="+s1+"&v1="+v1+"&h2="+h2+"&s2="+s2+"&v2="+v2);
+        //loadXML("loadPictures.php","h1="+h1+"&s1="+s1+"&v1="+v1+"&h2="+h2+"&s2="+s2+"&v2="+v2);
+        var min=-1;
+        var max=1;
+
+        if(document.getElementById("checkbox").checked){
+            min=0;
+            max=0;
+        }
+
+
+        //go("loadPictures.php","h1="+h1+"&s1="+s1+"&v1="
+        //        +v1+"&h2="+h2+"&s2="+s2+"&v2="+v2+"&min="+min+"&max="+max);
+        //window.location = "Images.php";
+    }
+</script>
+<body>
+
+
+<div id="colorChose">
+  <H1>Color Chicken</H1>
+  <script type="text/javascript" src="jscolor/jscolor.js"></script>
+
+  <p> Color 1<input class="color {required:false}" id="color1">
+  <p> Color 2<input class="color {required:false}" id="color2"><br>
+    <button class ="showImages">Load!</button>
+    <input type="checkbox" id="checkbox"> Just selected color   <Br>
+</div>
+</body>
