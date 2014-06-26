@@ -84,11 +84,15 @@ class ImagesController < ApplicationController
     end
   end
   def nextPicture
-    @@count+=1;
+    if @@count<@@size
+      @@count+=1
+    end
     render text: "next";
   end
   def prevPicture
-    @@count+=-1;
+    if @@count>0
+      @@count+=-1;
+    end
     render text: "prev";
   end
 
