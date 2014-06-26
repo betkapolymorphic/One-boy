@@ -1,0 +1,3 @@
+DATABASE_URL = postgres://ndimaniqvrvqzf:YfkdhKgb3LL8C7inwz2UWz2bfS@ec2-54-225-101-64.compute-1.amazonaws.com:5432/deouh37vamv99q
+HEROKU_POSTGRESQL_BLANK_URL = postgres://jnamocjqggmeju:B18u01nqvJVwRMRU542zh8YX-4@ec2-54-221-227-25.compute-1.amazonaws.com:5432/d75h474tqd9t4d
+HEROKU_POSTGRESQL_COPPER_URL =postgres://ndimaniqvrvqzf:YfkdhKgb3LL8C7inwz2UWz2bfS@ec2-54-225-101-64.compute-1.amazonaws.com:5432/deouh37vamv99q

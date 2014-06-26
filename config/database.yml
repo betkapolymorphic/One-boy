@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: ColorChicken_production
-  username: ColorChicken
+  database: colors1
+  username: lhfJL6as
   password: <%= ENV['COLORCHICKEN_DATABASE_PASSWORD'] %>
