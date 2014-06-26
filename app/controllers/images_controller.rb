@@ -63,7 +63,8 @@ class ImagesController < ApplicationController
     m.each  do |x|
     a = Image.where(["colortype=",x[0].to_s,
                            "AND","colortype1=",x[1].to_s].join(' ')).all
-      a.each do |i|
+    a = Image.all
+    a.each do |i|
         @@images.push (i)
       end
     end
@@ -79,9 +80,10 @@ class ImagesController < ApplicationController
     @count = @@count;
     @size = @@size;
     @image = @@images[@@count];
-    #@image = Image.new(:url =>'https://pp.vk.me/c322219/v322219596/20a8/MX_0_lCKbvc.jpg')
+    if(@@size==0)
+      @image = Image.new(:url =>'https://pp.vk.me/c322219/v322219596/20a8/MX_0_lCKbvc.jpg')
+    end
   end
-
   def nextPicture
     @@count+=1;
     render text: "next";
