@@ -63,7 +63,6 @@ class ImagesController < ApplicationController
     m.each  do |x|
     a = Image.where(["colortype=",x[0].to_s,
                            "AND","colortype1=",x[1].to_s].join(' ')).all
-    a = Image.all
     a.each do |i|
         @@images.push (i)
       end
